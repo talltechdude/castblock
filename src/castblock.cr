@@ -37,6 +37,7 @@ module Castblock
       @categories = read_env_str_array(@categories, ["sponsor"], "CATEGORIES")
       @mute_ads = read_env_bool(@mute_ads, false, "MUTE_ADS")
       @merge_threshold = read_env_float(@merge_threshold, 0.0, "MERGE_THRESHOLD")
+      @skip_ads = read_env_bool(@skip_ads, false, "SKIP_ADS")
     end
 
     def read_env_bool(value : Bool?, default : Bool?, name : String) : Bool?
